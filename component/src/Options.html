@@ -1,7 +1,7 @@
 <div class='options'>
-	  {#each options as text }
+	{#each options as text }
 	<Option {text} selected={isSelected(text)} on:select='select(text)' />
-	  {/each}
+	{/each}
 </div>
 
 <script>

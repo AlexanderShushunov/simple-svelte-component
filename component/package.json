@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "build-only-component": "rollup -c ./rollup.config.only.component.js",
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
     "start": "sirv public",
