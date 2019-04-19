@@ -1,6 +1,6 @@
 <div class='options'>
 	  {#each options as text }
-	    <div class='option' class:selected='isSelected(text)'>{text}</div>
+	   <div class='option' class:selected='isSelected(text)' on:click='select(text)'>{text}</div>
 	  {/each}
 </div>
 
@@ -13,6 +13,11 @@
     },
     computed: {
       isSelected: ({ selectedOption }) => option => option === selectedOption
+    },
+    methods: {
+      select(option) {
+        this.set({ selectedOption: option });
+      }
     }
   };
 </script>
