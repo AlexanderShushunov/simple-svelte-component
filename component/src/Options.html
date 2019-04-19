@@ -1,5 +1,19 @@
-<div>
-	  <div>Svelte</div>
-	  <div>React</div>
-	  <div>Vue</div>
+<div class='options'>
+	  <div class='option'>Svelte</div>
+	  <div class='option'>React</div>
+	  <div class='option'>Vue</div>
 </div>
+
+<style>
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+  .option {
+    font-size: 4rem;
+    padding: 0.5rem;
+    border: 3px solid transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+</style>
