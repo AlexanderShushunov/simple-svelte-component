@@ -1,11 +1,14 @@
 <div class='options'>
 	  {#each options as text }
-	   <div class='option' class:selected='isSelected(text)' on:click='select(text)'>{text}</div>
+	<Option {text} selected={isSelected(text)} on:select='select(text)' />
 	  {/each}
 </div>
 
 <script>
   export default {
+    components: {
+      Option: "./Option.html"
+    },
     data() {
       return {
         selectedOption: undefined
@@ -28,15 +31,5 @@
   .options {
     display: flex;
     flex-direction: column;
-  }
-  .option {
-    font-size: 4rem;
-    padding: 0.5rem;
-    border: 3px solid transparent;
-    border-radius: 1rem;
-    cursor: pointer;
-  }
-  .selected {
-    border-color: red;
   }
 </style>
