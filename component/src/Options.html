@@ -17,6 +17,7 @@
     methods: {
       select(option) {
         this.set({ selectedOption: option });
+        this.fire("select", option);
       }
     }
   };
