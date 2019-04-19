@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+	<link rel='stylesheet' href='../component/dist/Options.css'>
+	<script src='../component/dist/Options.js'></script>
+	<style>
+		body {
+			width: 400px;
+			margin: 100px;
+		}
+		#selected {
+			font-size: 40px;
+			margin: 30px;
+			color: red; 
+		}
+	</style>
+</head>
+
+<body>
+	<div id='selected'>.</div>
+	
+	<script>
+		var options = new Options({
+			target: document.body,
+			data: {
+				options: ["Svelte", "React", "Vue", "Angular"]
+			}
+		});
+		options.on('select', event => 
+			document.getElementById('selected').textContent = event
+		)
+	</script>
+</body>
+
+</html>

@@ -6,3 +6,12 @@
 npm i
 npm run dev
 ```
+
+Можно собрать компонент для его использования в простом HTML:
+
+```js
+npm i
+npm run build-only-component
+```
+
+Использование можно посмотреть в `usage-in-html/index.html`
