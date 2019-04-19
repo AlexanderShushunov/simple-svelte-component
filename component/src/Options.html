@@ -1,8 +1,21 @@
 <div class='options'>
 	  {#each options as text }
-	    <div class='option'>{text}</div>
+	    <div class='option' class:selected='isSelected(text)'>{text}</div>
 	  {/each}
 </div>
+
+<script>
+  export default {
+    data() {
+      return {
+        selectedOption: undefined
+      };
+    },
+    computed: {
+      isSelected: ({ selectedOption }) => option => option === selectedOption
+    }
+  };
+</script>
 
 
 <style>
@@ -16,5 +29,8 @@
     border: 3px solid transparent;
     border-radius: 1rem;
     cursor: pointer;
+  }
+  .selected {
+    border-color: red;
   }
 </style>
