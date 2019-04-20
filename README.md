@@ -15,3 +15,5 @@ npm run build-only-component
 ```
 
 Использование можно посмотреть в `usage-in-html/index.html`
+
+В папке `usage-in-react` лежит пример использования компонента и React.
